@@ -1,6 +1,4 @@
 "use client"
-
-import type React from "react"
 import { useState, useRef, useEffect, useCallback } from "react"
 import { Button } from "./components/Button"
 import { Slider } from "./components/Slider"
@@ -53,8 +51,6 @@ const VideoPlayer = ({
   const [subtitleUrl, setSubtitleUrl] = useState(initialSubtitleUrl)
   const [subtitles, setSubtitles] = useState<any[]>([])
   const [currentSubtitle, setCurrentSubtitle] = useState<string>("")
-  const [subtitleError, setSubtitleError] = useState<string | null>(null)
-  const [subtitleLoaded, setSubtitleLoaded] = useState(false)
   const [isPiPSupported, setIsPiPSupported] = useState(false)
   const [isPiPActive, setIsPiPActive] = useState(false)
   const [showTopControls, setShowTopControls] = useState(true)
@@ -152,9 +148,8 @@ const VideoPlayer = ({
   }
 
   const handleLoadSubtitleFromUrl = async (url: string) => {
-    setSubtitleError(null)
     if (!url) {
-      setSubtitleError("Invalid subtitle URL")
+      console.warn("Invalid subtitle URL")
       return
     }
 
@@ -177,26 +172,14 @@ const VideoPlayer = ({
         }))
 
         setSubtitles(cues)
-        setSubtitleLoaded(true)
-        setSubtitleError(null)
       } catch (error) {
-        setSubtitleError("Unsupported subtitle format")
+        console.warn("Unsupported subtitle format")
         setSubtitles([])
-        setSubtitleLoaded(false)
       }
     } catch (error) {
-      setSubtitleError("Failed to load subtitle file from URL")
+      console.warn("Failed to load subtitle file from URL")
       setSubtitles([])
-      setSubtitleLoaded(false)
     }
-  }
-
-  const removeSubtitles = () => {
-    setSubtitles([])
-    setCurrentSubtitle("")
-    setSubtitleUrl("")
-    setSubtitleError(null)
-    setSubtitleLoaded(false)
   }
 
   const hideControls = useCallback(() => {
@@ -378,7 +361,7 @@ const VideoPlayer = ({
     toggleFullscreen()
   }
 
-  const handleClick = (e: React.MouseEvent) => {
+  const handleClick = () => {
     const now = Date.now()
     if (lastTap && now - lastTap < 300) {
       handleDoubleClick()
@@ -444,7 +427,9 @@ const VideoPlayer = ({
         await video.requestPictureInPicture()
       }
       showControlsWithTimeout()
-    } catch (error) {}
+    } catch (error) {
+      console.warn("Picture-in-picture not supported or failed")
+    }
   }
 
   return (
