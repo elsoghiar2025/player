@@ -1,0 +1,67 @@
+{
+  "name": "@mr-m/player",
+  "version": "1.0.0",
+  "description": "A comprehensive, feature-rich video player component for React with subtitle support, fullscreen, PiP, and more",
+  "keywords": [
+    "react",
+    "video",
+    "player",
+    "video-player",
+    "subtitles",
+    "fullscreen",
+    "picture-in-picture",
+    "pip",
+    "media-player",
+    "react-component"
+  ],
+  "homepage": "https://github.com/mr-m/player#readme",
+  "bugs": {
+    "url": "https://github.com/mr-m/player/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mr-m/player"
+  },
+  "license": "MIT",
+  "author": "Mr-M",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@microsoft/api-extractor": "latest",
+    "@swc/core": "latest",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.454.0",
+    "next": "15.2.4",
+    "react": "^19",
+    "react-dom": "^19",
+    "subtitles-parser": "latest",
+    "tailwind-merge": "^2.5.5",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.5",
+    "tailwindcss": "^3.4.17",
+    "tsup": "^8.0.0",
+    "typescript": "^5"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  }
+}
