@@ -206,7 +206,7 @@ const VideoPlayer = ({
           setShowControls(false)
           setShowTopControls(false)
         }
-      }, 800)
+      }, 1000)
     }, 4000)
   }, [playing])
 
@@ -511,7 +511,7 @@ const VideoPlayer = ({
           <Button
             variant="ghost"
             size="icon"
-            className="text-white hover:bg-white/20 rounded-full p-4 bg-black/50 backdrop-blur-sm pointer-events-auto z-10"
+            className="text-white hover:bg-white/20 rounded-full p-4 bg-black/50 backdrop-blur-sm pointer-events-auto z-10 hover:text-white/80"
             onClick={toggleMute}
           >
             {muted ? <Icons.VolumeX className="w-[24px] h-[24px]" /> : <Icons.Volume2 className="w-[24px] h-[24px]" />}
@@ -519,7 +519,7 @@ const VideoPlayer = ({
           <Button
             variant="ghost"
             size="icon"
-            className="text-white hover:bg-white/20 rounded-full p-4 bg-black/50 backdrop-blur-sm pointer-events-auto z-10"
+            className="text-white hover:bg-white/20 rounded-full p-4 bg-black/50 backdrop-blur-sm pointer-events-auto z-10 hover:text-white/80"
             onClick={handleDownload}
             title="Download video"
           >
@@ -537,7 +537,7 @@ const VideoPlayer = ({
           <Button
             variant="ghost"
             size="icon"
-            className="text-white hover:bg-white/20 rounded-full p-4 bg-black/50 backdrop-blur-sm"
+            className="text-white hover:bg-white/20 rounded-full p-4 bg-black/50 backdrop-blur-sm hover:text-white/80"
             onClick={skipBackward}
             title="Skip forward 10 seconds"
           >
@@ -546,7 +546,7 @@ const VideoPlayer = ({
           <Button
             variant="ghost"
             size="icon"
-            className="text-white hover:bg-white/20 rounded-full p-8 bg-black/50 backdrop-blur-sm"
+            className="text-white hover:bg-white/20 rounded-full p-8 bg-black/50 backdrop-blur-sm hover:text-white/80"
             onClick={togglePlay}
           >
             {playing ? (
@@ -558,7 +558,7 @@ const VideoPlayer = ({
           <Button
             variant="ghost"
             size="icon"
-            className="text-white hover:bg-white/20 rounded-full p-4 bg-black/50 backdrop-blur-sm"
+            className="text-white hover:bg-white/20 rounded-full p-4 bg-black/50 backdrop-blur-sm hover:text-white/80"
             onClick={skipForward}
             title="Skip backward 10 seconds"
           >
@@ -595,7 +595,7 @@ const VideoPlayer = ({
               <Button
                 variant="ghost"
                 size="icon"
-                className="text-white hover:bg-white/20 rounded-full"
+                className="text-white hover:bg-white/20 rounded-full hover:text-white/80"
                 onClick={togglePictureInPicture}
                 title={isPiPActive ? "Exit picture-in-picture" : "Enter picture-in-picture"}
               >
@@ -609,7 +609,7 @@ const VideoPlayer = ({
             <Button
               variant="ghost"
               size="icon"
-              className="text-white hover:bg-white/20 rounded-full"
+              className="text-white hover:bg-white/20 rounded-full hover:text-white/80"
               onClick={toggleFullscreen}
             >
               {fullscreen ? <Icons.Minimize className="w-[24px] h-[24px]" /> : <Icons.Maximize className="w-[24px] h-[24px]" />}
