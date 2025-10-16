@@ -1,7 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
-import { Analytics } from "@vercel/analytics/react"
 import "./globals.css"
 
 const _geist = Geist({ subsets: ["latin"] })
@@ -21,8 +20,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`font-sans antialiased`}>
+        
+        <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
+        <script dangerouslySetInnerHTML={{ __html: "eruda.init();" }} />
+        
         {children}
-        <Analytics />
       </body>
     </html>
   )
