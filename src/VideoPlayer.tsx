@@ -206,7 +206,7 @@ const VideoPlayer = ({
           setShowControls(false)
           setShowTopControls(false)
         }
-      }, 500)
+      }, 2000)
     }, 3000)
   }, [playing])
 
