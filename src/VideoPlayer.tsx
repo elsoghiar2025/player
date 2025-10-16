@@ -206,8 +206,8 @@ const VideoPlayer = ({
           setShowControls(false)
           setShowTopControls(false)
         }
-      }, 2000)
-    }, 3000)
+      }, 800)
+    }, 4000)
   }, [playing])
 
   useEffect(() => {
@@ -550,9 +550,9 @@ const VideoPlayer = ({
             onClick={togglePlay}
           >
             {playing ? (
-              <Icons.Pause className="w-[48px] h-[48px] fill-current" />
+              <Icons.Pause className="w-[48px] h-[48px]" />
             ) : (
-              <Icons.Play className="w-[48px] h-[48px] fill-current" />
+              <Icons.Play className="w-[48px] h-[48px]" />
             )}
           </Button>
           <Button
