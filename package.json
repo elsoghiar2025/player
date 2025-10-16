@@ -1,7 +1,7 @@
 {
   "name": "@mr-m/player",
-  "version": "1.0.0",
-  "description": "A comprehensive, feature-rich video player component for React with subtitle support, fullscreen, PiP, and more",
+  "version": "1.0.1",
+  "description": "A comprehensive, feature-rich video player component for React with subtitle support, fullscreen, PiP, and more.",
   "keywords": [
     "react",
     "video",
@@ -14,13 +14,13 @@
     "media-player",
     "react-component"
   ],
-  "homepage": "https://github.com/mr-m/player#readme",
+  "homepage": "https://github.com/elsoghiar2025/player#readme",
   "bugs": {
-    "url": "https://github.com/mr-m/player/issues"
+    "url": "https://github.com/elsoghiar2025/player/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mr-m/player"
+    "url": "https://github.com/elsoghiar2025/player.git"
   },
   "license": "MIT",
   "author": "Mr-M",
@@ -33,26 +33,22 @@
     "LICENSE"
   ],
   "scripts": {
-    "build": "next build",
-    "build:lib": "tsup",
-    "dev": "next dev",
-    "dev:lib": "tsup --watch",
-    "prepublishOnly": "npm run build:lib",
-    "start": "next start"
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {
-    "@microsoft/api-extractor": "latest",
-    "@swc/core": "latest",
-    "@vercel/analytics": "latest",
+    "@mr-m/player": "^1.0.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.454.0",
-    "next": "15.2.4",
-    "react": "^19",
-    "react-dom": "^19",
     "subtitles-parser": "latest",
     "tailwind-merge": "^2.5.5",
     "tailwindcss-animate": "^1.0.7"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
   },
   "devDependencies": {
     "@types/node": "^22",
@@ -62,10 +58,6 @@
     "postcss": "^8.5",
     "tailwindcss": "^3.4.17",
     "tsup": "^8.0.0",
-    "typescript": "^5"
-  },
-  "peerDependencies": {
-    "react": ">=16.8.0",
-    "react-dom": ">=16.8.0"
+    "typescript": "^5.0.0"
   }
 }
