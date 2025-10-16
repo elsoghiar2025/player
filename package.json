@@ -1,6 +1,6 @@
 {
   "name": "@mr-m/player",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "A comprehensive, feature-rich video player component for React with subtitle support, fullscreen, PiP, and more.",
   "keywords": [
     "react",
@@ -33,12 +33,11 @@
     "LICENSE"
   ],
   "scripts": {
-    "build": "tsup",
+    "build": "tsup && cp src/styles.css dist/ 2>/dev/null || echo 'No CSS file to copy'",
     "dev": "tsup --watch",
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
-    "@mr-m/player": "^1.0.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.454.0",
