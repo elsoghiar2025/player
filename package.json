@@ -43,7 +43,7 @@
   "dependencies": {
     "@microsoft/api-extractor": "latest",
     "@swc/core": "latest",
-    "@vercel/analytics": "^1.1.0",
+    "@vercel/analytics": "latest",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.454.0",
