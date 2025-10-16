@@ -45,6 +45,7 @@ export default function Page() {
             url="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
             title="Big Buck Bunny - Demo Video"
             poster="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/BigBuckBunny.jpg"
+            subtitleUrl="https://sub-v1-api.vercel.app/sub/603692.srt"
             autoPlay={false}
             onPlay={handlePlay}
             onPause={handlePause}
