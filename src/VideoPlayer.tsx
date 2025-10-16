@@ -335,8 +335,8 @@ const VideoPlayer = ({
           await (containerRef.current as any).mozRequestFullScreen()
         }
 
-        if (screen.orientation && screen.orientation.lock) {
-          await screen.orientation.lock("landscape").catch(() => {})
+        if (screen.orientation && typeof (screen.orientation as any).lock === 'function') {
+          await (screen.orientation as any).lock("landscape").catch(() => {})
         }
       } else {
         if (document.exitFullscreen) {
