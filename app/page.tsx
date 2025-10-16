@@ -1,6 +1,6 @@
 "use client"
 
-import { VideoPlayer } from "../src"
+import VideoPlayer from "../src/VideoPlayer"
 import "../src/styles.css"
 
 export default function Page() {
