@@ -489,7 +489,7 @@ const VideoPlayer = ({
 
       {(loading || buffering) && (
         <div className="absolute inset-0 flex items-center justify-center bg-black/10 z-50">
-          <Icons.Loader2 className="w-16 h-16 text-white animate-spin" />
+          <Icons.Loader2 className="w-[48px] h-[48px] text-white animate-spin" />
         </div>
       )}
 
@@ -498,7 +498,7 @@ const VideoPlayer = ({
       >
         <div className="flex items-center gap-3">
           <div className="p-4 pointer-events-auto">
-            <Icons.VideoPlayerLogo className="w-5 h-5" />
+            <Icons.VideoPlayerLogo className="w-[20px] h-[20px]" />
           </div>
           {title && (
             <div className="bg-black/50 backdrop-blur-sm rounded-full px-4 py-2 pointer-events-auto">
@@ -514,7 +514,7 @@ const VideoPlayer = ({
             className="text-white hover:bg-white/20 rounded-full p-4 bg-black/50 backdrop-blur-sm pointer-events-auto z-10"
             onClick={toggleMute}
           >
-            {muted ? <Icons.VolumeX className="w-6 h-6" /> : <Icons.Volume2 className="w-6 h-6" />}
+            {muted ? <Icons.VolumeX className="w-[24px] h-[24px]" /> : <Icons.Volume2 className="w-[24px] h-[24px]" />}
           </Button>
           <Button
             variant="ghost"
@@ -523,7 +523,7 @@ const VideoPlayer = ({
             onClick={handleDownload}
             title="Download video"
           >
-            <Icons.Download className="w-6 h-6" />
+            <Icons.Download className="w-[24px] h-[24px]" />
           </Button>
         </div>
       </div>
@@ -541,7 +541,7 @@ const VideoPlayer = ({
             onClick={skipForward}
             title="Skip forward 10 seconds"
           >
-            <Icons.ArrowRightIcon className="w-12 h-12" />
+            <Icons.ArrowRightIcon className="w-[48px] h-[48px]" />
           </Button>
           <Button
             variant="ghost"
@@ -550,9 +550,9 @@ const VideoPlayer = ({
             onClick={togglePlay}
           >
             {playing ? (
-              <Icons.Pause className="w-18 h-18 fill-current" />
+              <Icons.Pause className="w-[48px] h-[48px] fill-current" />
             ) : (
-              <Icons.Play className="w-16 h-16 fill-current" />
+              <Icons.Play className="w-[48px] h-[48px] fill-current" />
             )}
           </Button>
           <Button
@@ -562,7 +562,7 @@ const VideoPlayer = ({
             onClick={skipBackward}
             title="Skip backward 10 seconds"
           >
-            <Icons.ArrowLeftIcon className="w-12 h-12" />
+            <Icons.ArrowLeftIcon className="w-[48px] h-[48px]" />
           </Button>
         </div>
       </div>
@@ -600,9 +600,9 @@ const VideoPlayer = ({
                 title={isPiPActive ? "Exit picture-in-picture" : "Enter picture-in-picture"}
               >
                 {isPiPActive ? (
-                  <Icons.PictureInPicture2 className="w-6 h-6" />
+                  <Icons.PictureInPicture2 className="w-[24px] h-[24px]" />
                 ) : (
-                  <Icons.PictureInPicture className="w-6 h-6" />
+                  <Icons.PictureInPicture className="w-[24px] h-[24px]" />
                 )}
               </Button>
             )}
@@ -612,7 +612,7 @@ const VideoPlayer = ({
               className="text-white hover:bg-white/20 rounded-full"
               onClick={toggleFullscreen}
             >
-              {fullscreen ? <Icons.Minimize className="w-6 h-6" /> : <Icons.Maximize className="w-6 h-6" />}
+              {fullscreen ? <Icons.Minimize className="w-[24px] h-[24px]" /> : <Icons.Maximize className="w-[24px] h-[24px]" />}
             </Button>
           </div>
         </div>
