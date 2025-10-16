@@ -37,6 +37,11 @@ svg, .icon {
   min-height: 24px;
 }
 
+svg:hover {
+  color: rgba(255, 255, 255, 0.7) !important;
+  transition: color 0.2s ease-in-out;
+}
+
 @keyframes spin {
   from {
     transform: rotate(0deg);
