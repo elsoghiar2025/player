@@ -538,10 +538,10 @@ const VideoPlayer = ({
             variant="ghost"
             size="icon"
             className="text-white hover:bg-white/20 rounded-full p-4 bg-black/50 backdrop-blur-sm"
-            onClick={skipForward}
+            onClick={skipBackward}
             title="Skip forward 10 seconds"
           >
-            <Icons.ArrowRightIcon className="w-[48px] h-[48px]" />
+            <Icons.ArrowLeftIcon className="w-[48px] h-[48px]" />
           </Button>
           <Button
             variant="ghost"
@@ -559,10 +559,10 @@ const VideoPlayer = ({
             variant="ghost"
             size="icon"
             className="text-white hover:bg-white/20 rounded-full p-4 bg-black/50 backdrop-blur-sm"
-            onClick={skipBackward}
+            onClick={skipForward}
             title="Skip backward 10 seconds"
           >
-            <Icons.ArrowLeftIcon className="w-[48px] h-[48px]" />
+            <Icons.ArrowRightIcon className="w-[48px] h-[48px]" />
           </Button>
         </div>
       </div>
