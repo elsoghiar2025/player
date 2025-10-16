@@ -33,9 +33,12 @@
     "LICENSE"
   ],
   "scripts": {
-    "build": "tsup",
-    "dev": "tsup --watch",
-    "prepublishOnly": "npm run build"
+    "build": "next build",
+    "build:lib": "tsup",
+    "dev": "next dev",
+    "dev:lib": "tsup --watch",
+    "prepublishOnly": "npm run build:lib",
+    "start": "next start"
   },
   "dependencies": {
     "@microsoft/api-extractor": "latest",
